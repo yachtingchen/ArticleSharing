@@ -3,6 +3,7 @@
 Front-end:  
   
 React  
+React Slingshot  
 Semantic UI  
 Quill rich text editor  
   
