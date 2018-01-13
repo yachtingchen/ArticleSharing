@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  **NOTE:** This is a template for index.html. It uses ejs and htmlWebpackPlugin to generate a different index.html for each environment. htmlWebpackPlugin will dynamically add references to the scripts and styles that it bundles to this file. The generated bundles have hash-based filenames, so it's necessary to add the references dynamically.
+  For more info on ejs, see http://www.embeddedjs.com/. For examples of using it with htmlWebpackPlugin, see https://github.com/jaketrent/html-webpack-template/blob/master/index.ejs
+  -->
+<head>
+  <meta name="google-site-verification" content="59RJM9sejvfUOrYxHLuGJOnPSyrai7hb91vSr1TMtLI" />
+  <!--
+    The htmlWebpackPlugin will parse the logic below so that trackJS is only added to the production version of index.html 
+    (since only webpack.config.prod.js provides the trackJS token)
+    This is an example of how to add features to index.html for only one environment.
+    To track JavaScript errors via TrackJS, sign up for a free trial at TrackJS.com 
+    and enter your token in /webpack.config.prod.js on line 55.
+   -->
+  <% if (htmlWebpackPlugin.options.trackJSToken) { %>
+  <script>window._trackJs = {token: '<%= htmlWebpackPlugin.options.trackJSToken %>'};</script>
+  <script src="https://d2zah9y47r7bi2.cloudfront.net/releases/current/tracker.js"></script>
+  <% } %>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css"></link>
+  <!--
+    Style for DraftJs see: https://github.com/facebook/draft-js/issues/926
+   -->
+  <style>
+    .public-DraftStyleDefault-block {
+        font-size: 0px;
+      }
+
+    .public-DraftStyleDefault-block span {
+        font-size: 14px;
+      }
+     .md-RichEditor-editor {
+        border: 1px solid gray;
+        border-radius: 3px;
+      }
+      .public-DraftEditorPlaceholder-inner {
+        font-size: 0px;
+      }
+  </style>
+  <!--
+    Style from print-sheets
+
+    color: rgb(102, 102, 102);
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 0.8px;
+    word-wrap: break-word;
+    text-size-adjust: 100%;
+  !-->
+  <style>
+    body {
+        font-family: Arial, 文泉驛正黑, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", 微軟正黑體, "Microsoft JhengHei", 微软雅黑, メイリオ, "맑은 고딕", sans-serif;        
+    }
+  </style>
+  <link href="//cdn.quilljs.com/1.2.0/quill.snow.css" rel="stylesheet">
+  <title>Yenting Chen</title>  
+</head>
+<body>
+<div id="app"></div>
+</body>
+</html>

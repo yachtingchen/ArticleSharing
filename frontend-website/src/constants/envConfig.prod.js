@@ -1,0 +1,1 @@
+export const API_SRV_ORIGIN = 'http://104.198.115.189:8080';

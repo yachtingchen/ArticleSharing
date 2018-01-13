@@ -1,0 +1,1 @@
+export const API_SRV_ORIGIN = 'http://localhost:8080';

@@ -1,0 +1,6 @@
+{ 
+  "workers": "src/bin/www.js",
+  "workerCount": "1",
+  "accessKey": "7sfspk1axhmia",
+  "port": "11987"
+}
